@@ -15,7 +15,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let libro of libros">
-                        <td> {{ libro.Titulo }} </td>
+                        <td> <a [routerLink]="'/detalle'"> {{ libro.Titulo }} </a></td>
                         <td> {{ libro.Autor }} </td>
                         <td> {{ libro.Precio | currency }} </td>
                         <td> {{ libro.Fecha | date:"MM/dd/yyyy" }} </td>

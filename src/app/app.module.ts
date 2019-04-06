@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { LibrosComponent } from './libros/libros.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DetalleLibroComponent } from './detalle-libro/detalle-libro.component';
 
 const routes: Routes = [
   { path: "inicio", component: InicioComponent }, 
   { path: "libros", component: LibrosComponent }, 
+  { path: "detalle", component: DetalleLibroComponent }, 
   { path: "404", component: NotFoundComponent }, 
   { path: "", component: InicioComponent, pathMatch: 'full' }, 
   { path: "**", redirectTo: '404' }, 
@@ -21,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     LibrosComponent,
     InicioComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DetalleLibroComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes)
