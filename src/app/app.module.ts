@@ -12,7 +12,7 @@ import { DetalleLibroComponent } from './detalle-libro/detalle-libro.component';
 const routes: Routes = [
   { path: "inicio", component: InicioComponent }, 
   { path: "libros", component: LibrosComponent }, 
-  { path: "detalle", component: DetalleLibroComponent }, 
+  { path: "detalle/:id", component: DetalleLibroComponent }, 
   { path: "404", component: NotFoundComponent }, 
   { path: "", component: InicioComponent, pathMatch: 'full' }, 
   { path: "**", redirectTo: '404' }, 
