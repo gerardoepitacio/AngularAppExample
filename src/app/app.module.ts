@@ -2,6 +2,7 @@ import { RouterModule, Routes } from "@angular/router"
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http"
 
 import { AppComponent } from './app.component';
 import { LibrosComponent } from './libros/libros.component';
@@ -27,7 +28,7 @@ const routes: Routes = [
     DetalleLibroComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(routes)
+    BrowserModule, RouterModule.forRoot(routes), HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
