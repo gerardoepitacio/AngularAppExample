@@ -1,0 +1,26 @@
+<div class="container-table100">
+  <div class="wrap-table100">
+    <div class="table100">
+      <table>
+        <thead>
+          <tr class="table100-head">
+            <th class="column2">Name</th>
+            <th class="column3">Username</th>
+            <th class="column4">Phone</th>
+            <th class="column5">Website</th>
+            <th class="column6">Company</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usuarios">
+              <td class="column2">{{ user.name }}  </td>
+              <td class="column3">{{ user.username }}  </td>
+              <td class="column4">{{ user.phone }}  </td>
+              <td class="column5">{{ user.website }}  </td>
+              <td class="column6">{{ user.company.name }} </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
