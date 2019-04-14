@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http"
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatButtonModule, MatCheckboxModule } from '@angular/material'
+
 import { AppComponent } from './app.component';
 import { LibrosComponent } from './libros/libros.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetalleLibroComponent } from './detalle-libro/detalle-libro.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const routes: Routes = [
   { path: "inicio", component: InicioComponent }, 
@@ -31,7 +35,13 @@ const routes: Routes = [
     UsuariosComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(routes), HttpClientModule
+    BrowserModule, 
+    RouterModule.forRoot(routes), 
+    HttpClientModule, 
+    BrowserAnimationsModule, 
+    MatButtonModule, 
+    MatCheckboxModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
